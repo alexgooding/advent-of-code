@@ -14,10 +14,6 @@ def get_common_item_type(rucksack: list[str]) -> str:
     return ''.join(set(rucksack[0]).intersection(rucksack[1]))
 
 
-# def calculate_round_score(pair: str) -> int:
-#     return POINT_COMBINATIONS[pair]
-
-
 if __name__ == '__main__':
     rucksacks = parse_input('day_3_input.txt')
     total_priority = sum([char_to_priority(get_common_item_type(rucksack)) for rucksack in rucksacks])
